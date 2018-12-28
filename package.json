@@ -1,0 +1,38 @@
+{
+  "name": "my-material-gatsby-site",
+  "description": "My Material Gatsby site",
+  "license": "Unlicense",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve",
+    "push": "cd public && rm -rf .git && git init && git checkout -b gh-pages && git remote add origin git@github.com:libetl/my-material-gatsby-site.git && git add . && git commit -m \"site published\" && git push -u origin gh-pages -f"
+  },
+  "dependencies": {
+    "gatsby": "2.0.33",
+    "gatsby-link": "^2.0.7",
+    "gatsby-plugin-local-search": "^0.1.4",
+    "gatsby-plugin-manifest": "^2.0.12",
+    "gatsby-plugin-offline": "^2.0.20",
+    "gatsby-plugin-sass": "^2.0.7",
+    "gatsby-plugin-sitemap": "^2.0.3",
+    "gatsby-react-router-scroll": "^2.0.2",
+    "gatsby-remark-copy-linked-files": "^2.0.8",
+    "gatsby-remark-prismjs": "^3.1.4",
+    "gatsby-remark-sequence": "^0.0.2",
+    "gatsby-remark-static-images": "^1.0.0",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.17",
+    "global": "4.3.2",
+    "lunr": "^2.3.5",
+    "material-icons": "^0.3.0",
+    "materialize-css": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "node-sass-json-importer": "^4.1.0",
+    "prettier": "^1.15.3",
+    "prismjs": "^1.15.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "LiBe material gatsby site",
+  "pathPrefix": "/my-material-gatsby-site",
+  "sourceUrl": "https://github.com/libetl/my-material-gatsby-site",
+  "editionPrefix": "https://github.com/libetl/my-material-gatsby-site/edit/master/docs",
+  "description": "My own gatsby site using materialize css",
+  "shortName": "my-material-gatsby-site",
+  "navbarLinks": [
+    {
+      "path": "about",
+      "title": "About this site"
+    }
+  ],
+  "homepageLabel": "Homepage",
+  "editMeLabel": "EDIT ME",
+  "subSectionsLabel": "Sub Sections"
+}

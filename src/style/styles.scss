@@ -1,0 +1,111 @@
+@import "materialize-css/sass/components/_color-variables.scss";
+@import "materialize-css/sass/components/_variables.scss";
+@import "materialize-css/sass/components/_global.scss";
+@import "customize/colors.json";
+
+nav a.sidenav-trigger {
+  display: block !important;
+}
+
+#search {
+  transition: all 0.5s ease;
+  color: white;
+}
+
+@media #{$large-and-up} {
+  #navbar-list {
+    display: block !important;
+    transform: translate(0px);
+    transition: all 0.5s ease;
+    z-index: 996;
+
+    > ul {
+      margin-top: 132px;
+    }
+  }
+
+  .content {
+    margin-left: 320px !important;
+  }
+}
+
+@media #{$medium-and-down} {
+  #search {
+    position: absolute;
+    width: 64rem !important;
+    height: 62px;
+    color: $searchTextColorMidScreen;
+  }
+
+  #search::placeholder {
+    color: $themeColor;
+  }
+
+  #search.searching {
+    background-color: $searchOverlay
+  }
+
+  #searchContainer {
+    float: initial !important;
+  }
+}
+
+@media #{$small-and-down} {
+  .breadcrumb span.waves-effect {
+    line-height: 58px !important;
+  }
+}
+
+#searchContainer {
+  float: right;
+}
+
+#searchIcon {
+  cursor: pointer;
+}
+
+#searchResults {
+  position: absolute;
+  background-color: $searchResultsColor;
+  line-height: 1;
+  box-shadow: 0 0 0.75rem $searchResultsBoxShadow;
+  color: black;
+
+  .collection-item {
+    background-color: $searchResultsColor !important;
+  }
+}
+
+.content {
+  margin: 2em;
+}
+.waves-effect {
+  &.waves-bird .waves-ripple {
+    background-color: $linkColor;
+  }
+}
+
+nav {
+  background-color: $themeColor !important;
+}
+
+#title-large-screen {
+  margin-left: 60px;
+}
+
+.breadcrumb::before {
+  margin: 0 !important;
+}
+
+.breadcrumb span.waves-effect {
+  vertical-align: top;
+  line-height: 64px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+$material-icons-font-path: '~material-icons/iconfont/';
+
+@import "materialize-css/sass/materialize.scss";
+@import "material-icons/iconfont/material-icons.scss";
+
