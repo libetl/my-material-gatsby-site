@@ -42,4 +42,10 @@ const find = (foldedContent, path) =>
           .join("/")
       );
 
-export { fold, find };
+const asPathHierarchy = path => Array.apply(null, {length: path.split('/').length}).map(Function.call, Number).map(separatorIndex => path.split('/').slice(0, separatorIndex + 1).join('/'))
+const pathToFakeEntry = path => ({node:{frontmatter:{path: path.replace(/\/*$/, ''), title: path.replace(/\/*$/, '').split('/').slice(-1)[0], description: path.replace(/\/*$/, '').split('/').slice(-1)[0]}}})
+
+const cheatOn = list => list.map(({node:{path}}) => pathToFakeEntry(path))
+  .concat(...list.map(({node:{path}}) => asPathHierarchy(path).filter(path=>path).map(onePath => pathToFakeEntry(onePath))))
+
+export { fold, find, cheatOn };

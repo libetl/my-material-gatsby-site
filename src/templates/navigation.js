@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, withPrefix } from "gatsby";
+import { withPrefix, Link } from "gatsby";
 import {
   navbarLinks,
   editionPrefix,
@@ -237,7 +237,7 @@ export const BreadCrumb = ({ title, date, path }) => (
         <div className="col s3" style={{ marginLeft: "1em" }}>
           {path.split("/").map((element, i) => (
             <Link
-              key={`breadcrumb-${element}`}
+              key={`breadcrumb-${element}-${i}`}
               to={
                 path === homepageLabel
                   ? ""

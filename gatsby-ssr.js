@@ -48,11 +48,12 @@ function inlinedScript(document, M, Waves) {
             .join("_") || "_")
       )
       .forEach(item => {
-        (
-          document.querySelector("#" + item + " + .collapsible-body") || {
-            style: {}
-          }
-        ).style.display = "block";
+        const divToUpdate = document.querySelector("#" + item + " + .collapsible-body") || {
+          style: {},
+          parentNode: {className: ''}
+        };
+        divToUpdate.style.display = "block";
+        divToUpdate.parentNode.className += ' active';
       });
 
     Waves.displayEffect();
