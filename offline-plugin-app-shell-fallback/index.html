@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/><title>LiBe material gatsby site</title><meta name="generator" content="Gatsby 2.0.33"/><link rel="shortcut icon" href="/my-material-gatsby-site/icons/icon-48x48.png"/><link rel="manifest" href="/my-material-gatsby-site/manifest.webmanifest"/><meta name="theme-color" content="#5978a6"/><link as="script" rel="preload" href="/my-material-gatsby-site/component---d-workspace-my-material-gatsby-site-node-modules-gatsby-plugin-offline-app-shell-js-226a1e40a3fc32630704.js"/><link as="script" rel="preload" href="/my-material-gatsby-site/app-05691dc653bc6b1156ee.js"/><link as="script" rel="preload" href="/my-material-gatsby-site/webpack-runtime-e556c93a4bb692c11cd0.js"/><link rel="preload" href="/my-material-gatsby-site/static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json" as="fetch" crossOrigin="use-credentials"/></head><body><noscript>Please enable javascript to browse this documentation</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"></div></div></body><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---d-workspace-my-material-gatsby-site-node-modules-gatsby-plugin-offline-app-shell-js","jsonName":"offline-plugin-app-shell-fallback-a30","path":"/offline-plugin-app-shell-fallback/"};window.dataPath="520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-05691dc653bc6b1156ee.js"],"component---d-workspace-my-material-gatsby-site-node-modules-gatsby-plugin-offline-app-shell-js":["/component---d-workspace-my-material-gatsby-site-node-modules-gatsby-plugin-offline-app-shell-js-226a1e40a3fc32630704.js"],"component---src-templates-doc-item-template-js":["/component---src-templates-doc-item-template-js.5426b72a6854d38b2fa9.css","/component---src-templates-doc-item-template-js-6393324fbb013a136f3b.js"],"component---src-pages-test-dynamic-component-js":["/component---src-pages-test-dynamic-component-js-98079957fd63eb919993.js"]};/*]]>*/</script><script src="/my-material-gatsby-site/webpack-runtime-e556c93a4bb692c11cd0.js" async=""></script><script src="/my-material-gatsby-site/app-05691dc653bc6b1156ee.js" async=""></script><script src="/my-material-gatsby-site/component---d-workspace-my-material-gatsby-site-node-modules-gatsby-plugin-offline-app-shell-js-226a1e40a3fc32630704.js" async=""></script><script defer="">
+  (function () {
+    var _wr = function _wr(type) {
+      var orig = history[type];
+      return function () {
+        var rv = orig.apply(this, arguments);
+        var e = new Event(type);
+        e.arguments = arguments;
+        window.dispatchEvent(e);
+        return rv;
+      };
+    };
+
+    history.pushState = _wr("pushState");
+    history.replaceState = _wr("replaceState");
+  })();
+
+  var gatsbyIsLoaded = function gatsbyIsLoaded() {
+    if (!document.getElementById("___gatsby").childNodes.length) return;
+    if (!document.querySelector("#searchIcon")) return new MutationObserver(gatsbyIsLoaded).observe(document.getElementById("___gatsby").firstChild, {
+      childList: true
+    });
+    var elems = document.querySelectorAll(".sidenav");
+    var instances = M.Sidenav.init(elems);
+    var elems1 = document.querySelectorAll(".collapsible");
+    var instances1 = M.Collapsible.init(elems1);
+    document.querySelector("#searchIcon").addEventListener("click", function () {
+      document.querySelector("#search").focus();
+    });
+    var sitePath = window.location.pathname.replace('/my-material-gatsby-site', "").replace(/\/*$/, "/");
+    Array.apply(null, {
+      length: sitePath.match(/\//g).length
+    }).map(function (_, i) {
+      return "navitem-" + (sitePath.split("/").slice(0, i + 1).join("_") || "_");
+    }).forEach(function (item) {
+      var divToUpdate = document.querySelector("#" + item + " + .collapsible-body") || {
+        style: {},
+        parentNode: {
+          className: ''
+        }
+      };
+      divToUpdate.style.display = "block";
+      divToUpdate.parentNode.className += ' active';
+    });
+    Waves.displayEffect();
+  };
+
+  document.addEventListener("DOMContentLoaded", gatsbyIsLoaded);
+  window.addEventListener("pushState", function () {
+    return Array.from(document.querySelectorAll(".sidenav-overlay")).map(function (e) {
+      return e.remove();
+    }) | Array.from(document.querySelectorAll(".drag-target")).map(function (e) {
+      return e.remove();
+    }) | setTimeout(gatsbyIsLoaded, 200);
+  });
+  window.addEventListener("replaceState", function () {
+    return Array.from(document.querySelectorAll(".sidenav-overlay")).map(function (e) {
+      return e.remove();
+    }) | Array.from(document.querySelectorAll(".drag-target")).map(function (e) {
+      return e.remove();
+    }) | setTimeout(gatsbyIsLoaded, 200);
+  });
+  window.addEventListener("popState", function () {
+    return Array.from(document.querySelectorAll(".sidenav-overlay")).map(function (e) {
+      return e.remove();
+    }) | Array.from(document.querySelectorAll(".drag-target")).map(function (e) {
+      return e.remove();
+    }) | setTimeout(gatsbyIsLoaded, 200);
+  });
+  new MutationObserver(gatsbyIsLoaded).observe(document.getElementById("___gatsby"), {
+    childList: true
+  });
+</script></html>
